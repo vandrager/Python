@@ -12,4 +12,4 @@ def problem(issue, maker):
     else:
         print("학교가 징계받지 않습니다.")
 
-problem(5, 1)
+problem(5, 3)
