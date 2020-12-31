@@ -18,25 +18,25 @@ elem = browser.find_element_by_class_name("link_login")
 elem.click()
 
 #(selenium 기능 학습)
-# browser.back()
-# browser.forward()
-# browser.refresh()
-# elem = browser.find_element_by_id("query")
-# from selenium.webdriver.common.keys import Keys
-# elem.send_keys("나도코딩")
-# elem.send_keys(Keys.ENTER)
-# elem = browser.find_element_by_tag_name("a") ( 하나만 )
-# elem = browser.find_elements_by_tag_name("a") ( 모두다 )
-# for e in elem:
-#     e.get_attribute("href")
-# browser.get("http://daum.net")
-# elem = browser.find_element_by_name("q")
-# elem.send_keys("나도코딩")
-# elem.send_keys(Keys.ENTER)
-# elem = browser.find_element_by_xpath("//*[@id='daumSearch']/fieldset/div/div/button[2]")
-# elem.click()
-# browser.quit() #아예 꺼버리기
-# browser.close() #탭만 닫아버리기
+browser.back()
+browser.forward()
+browser.refresh()
+elem = browser.find_element_by_id("query")
+from selenium.webdriver.common.keys import Keys
+elem.send_keys("나도코딩")
+elem.send_keys(Keys.ENTER)
+elem = browser.find_element_by_tag_name("a") ( 하나만 )
+elem = browser.find_elements_by_tag_name("a") ( 모두다 )
+for e in elem:
+    e.get_attribute("href")
+browser.get("http://daum.net")
+elem = browser.find_element_by_name("q")
+elem.send_keys("나도코딩")
+elem.send_keys(Keys.ENTER)
+elem = browser.find_element_by_xpath("//*[@id='daumSearch']/fieldset/div/div/button[2]")
+elem.click()
+browser.quit() #아예 꺼버리기
+browser.close() #탭만 닫아버리기
 # # 터미널에 위와 동일 내용 입력
 
 
