@@ -3,11 +3,13 @@
 # webdriver? 크롬용, 익스플로어용 등 다양하게 존재
 # chromedriver 구글 검색 웹사이트 접속
 # chrome 버전과 win/mac 타입에 맞게 설치
-
+# 단순 파이썬 파일로 실행하면 자동 종료되고 파이썬 터미널 또는 주피터 노트북 파일로 실행하면 자동 종료되지 않는다.
+# 크롬 브라우저/셀리니움 업데이트 다 해보았고 webdriver 문제도 아니었음, Firefox도 안돼
 from selenium import webdriver
-browser = webdriver.Chrome("./webscraping_basic/chromedriver.exe")
+
 #나는 python 폴더 외부에 크롬 드라이버가 있기 때문에 파일경로 입력 필요, 만약 내부에 있다면 입력 필요X
-time.sleep(100)
+browser = webdriver.Chrome("C:/Users/vandr/OneDrive/바탕 화면/Bigdata/Python/webscraping_basic/chromedriver.exe")
+
 #1. 네이버 이동
 browser.get("http://naver.com")
 
