@@ -6,6 +6,7 @@ res = requests.get(url)
 res.raise_for_status()
 
 soup = BeautifulSoup(res.text, "lxml")
+# 텍스트형태의 html 데이터에서 원하는 html 요소에 접근하기 위해 BeautifulSoup을 사용한다.
 print(soup.title)
 # --> <title>네이버 만화 &gt; 요일별  웹툰 &gt; 전체웹툰</title>
 print(soup.title.get_text()) #title의 글자만 가져와
