@@ -1,5 +1,5 @@
 from selenium import webdriver
-browser = webdriver.Chrome("chromedriver.exe")
+browser = webdriver.Chrome(r"C:\Users\vandr\OneDrive\바탕 화면\Bigdata\Python\webscraping_basic/chromedriver.exe")
 
 
 url = "http://www.naver.com"
@@ -25,7 +25,6 @@ print("초미세먼지 {}".format(chomise.text))
 
 url2 = "https://news.naver.com/"
 browser.get(url2)
-link = "https://news.naver.com/"
 head = browser.find_elements_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[1]/div[1]/a")
                                        #//*[@id="today_main_news"]/div[2]/ul/li[2]/div[1]/a
 #print(browser.find_element_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[1]/div[1]/a").get_attribute("href"))
@@ -47,6 +46,3 @@ head = browser.find_elements_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[1
 # for i in range(1, 4):
 #     print(i, ".", head[i].text)
 #     print(head[i].find("a")["href"])
-
-
-
