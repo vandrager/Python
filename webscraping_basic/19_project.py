@@ -1,5 +1,7 @@
 from selenium import webdriver
 browser = webdriver.Chrome("chromedriver.exe")
+
+
 url = "http://www.naver.com"
 browser.get(url)
 browser.find_element_by_class_name("input_text").send_keys("오늘 수원 날씨")
@@ -23,19 +25,28 @@ print("초미세먼지 {}".format(chomise.text))
 
 url2 = "https://news.naver.com/"
 browser.get(url2)
-head = browser.find_elements_by_class_name("hdline_article_tit")
 link = "https://news.naver.com/"
+head = browser.find_elements_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[1]/div[1]/a")
+                                       #//*[@id="today_main_news"]/div[2]/ul/li[2]/div[1]/a
+#print(browser.find_element_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[1]/div[1]/a").get_attribute("href"))
+#nowText = browser.find_element_by_class_name("hdline_article_tit").get_attribute("href")
+#print(nowText)
+# for i in range(1, 4):
+#     print("{}.".format(i), browser.find_element_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[i]/div[1]/a").text)
+#     print("(링크: {})".format(browser.find_element_by_xpath("//*[@id='today_main_news']/div[2]/ul/li[i]/div[1]/a").get_attribute("href")))
+    
+
 # for index, i in enumerate(head):
-#     print(f"{index+1}. {i.text}")
+#     print(f"{index+1}. {i.div.text}")
+#     print(link + i["href"])
 #     if index == 2:
 #         break
 
-for i in range(1, 4):
-    print(i, ".", head[i].text)
-    print(head[i].find("a")["href"])
-
-    
 
 
-print(head[0].text)
+# for i in range(1, 4):
+#     print(i, ".", head[i].text)
+#     print(head[i].find("a")["href"])
+
+
 
