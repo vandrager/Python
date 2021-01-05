@@ -1,15 +1,15 @@
 import csv, os
-# f = open('a.csv', 'r', encoding='utf-8')
+f = open('a.csv', 'r', encoding='utf-8')
 
-# k = csv.reader(f)
-# for i in k:
-#     print(i)
+k = csv.reader(f)
+for i in k:
+    print(i)
 
-# a_list = []
-# f.seek(0) #커서를 처음(0)으로 이동해야함 csv.reader(f) 때문에 커서가 맨 마지막으로 이동했기 때문
-# for i in k:
-#     print(i)
-#     a_list.append(i)
+a_list = []
+f.seek(0) #커서를 처음(0)으로 이동해야함 csv.reader(f) 때문에 커서가 맨 마지막으로 이동했기 때문
+for i in k:
+    print(i)
+    a_list.append(i)
 
 def opencsv(filename):
     f = open(filename, 'r')
