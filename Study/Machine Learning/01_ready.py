@@ -1,7 +1,9 @@
 #pip install scipy
 #pip install scikit-learn
 import pandas as pd
+import numpy as np
 import csv, usecsv, os, re
+import seaborn as sns
 dict_data = {'a': 1, "b": 2, "c": 3}
 k = pd.Series(dict_data) # 시리즈는 1:1대응
 print(k)
@@ -245,4 +247,61 @@ print(per)
 student1 = pd.Series({'국어': 100, "수학": 20, "영어": 30})
 student2 = pd.Series({'국어': 60, "수학": 70, "영어": 50})
 add = student1 + student2
-print(add)
+
+minus = student1 - student2
+division = student1 / student2
+multiple = student1 * student2
+all_data = pd.DataFrame([add, minus, division, multiple],
+                        index=['덧셈', '뺄셈', '나눗셈', '곱셈'])
+print(all_data)
+
+student1 = pd.Series({'국어': np.nan, "수학": 20, "영어": 30})
+student2 = pd.Series({'국어': 60, "수학": 70})
+
+sr_add = student1.add(student2, fill_value=0)
+sr_sub = student1.sub(student2, fill_value=0)
+sr_mul = student1.mul(student2, fill_value=0)
+sr_div = student1.div(student2, fill_value=0)
+
+result = pd.DataFrame([sr_add, sr_sub, sr_mul, sr_div],
+                        index=['덧셈', '뺄셈', '곱셈', '나눗셈'])
+
+print(result)
+#        국어           수학    영어
+# 덧셈   60.0    90.000000  30.0
+# 뺄셈  -60.0   -50.000000  30.0
+# 곱셈   0.0  1400.000000   0.0
+# 나눗셈    0.0     0.285714   inf
+# inf ---> infinity 무한대 80/0
+
+titanic = sns.load_dataset('titanic')
+df = titanic.loc[:, ['age', 'fare']]
+print(df.head())
+#     age     fare
+# 0  22.0   7.2500
+# 1  38.0  71.2833
+# 2  26.0   7.9250
+# 3  35.0  53.1000
+# 4  35.0   8.0500
+top_5 = df.head()
+addition = df + 10
+print(addition) #age와 fare 모두에 10씩 추가됨
+
+topx2 = top_5 + top_5
+print(topx2)
+#     age      fare
+# 0  44.0   14.5000
+# 1  76.0  142.5666
+# 2  52.0   15.8500
+# 3  70.0  106.2000
+# 4  70.0   16.1000
+
+# -----> dataframe끼리 계산할 때 한 쪽이 nan이면 에러가 출력된다. 오류값이 없는지 반드시 확인
+topx2['fare'] = (topx2['fare']/2)
+print(topx2)
+#     age     fare
+# 0  44.0   7.2500
+# 1  76.0  71.2833
+# 2  52.0   7.9250
+# 3  70.0  53.1000
+# 4  70.0   8.0500
