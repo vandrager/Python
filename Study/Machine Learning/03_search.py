@@ -88,5 +88,7 @@ df_ns.index = ['south', 'north']
 df_ns.columns = df_ns.columns.map(int)
 print(df_ns.head())
 
-print(df_ns['1990': ])
 print(df_ns.iloc[0:])
+print(df_ns.index)
+print(df_ns.columns)
+print(df_ns.loc['south':'north', '1990':'2000'])
