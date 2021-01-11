@@ -60,3 +60,4 @@ folium.Choropleth(geo_data=geo_data, #지도 경계
                     ).add_to(g_map)
 
 g_map.save("2007gyeonggido.html")
+print("hello")
