@@ -3,7 +3,7 @@ import seaborn as sns
 import os
 os.chdir(r'C:\Users\vandr\OneDrive\바탕 화면\Bigdata\Data\practice')
 titanic = sns.load_dataset("titanic")
-
+안녕하세요 액트온입니다.
 df = titanic.loc[:, ['age', 'sex', 'class', 'fare', 'survived']]
 ## 그룹 연산 메소드(적용 - 결합 단계)
 
