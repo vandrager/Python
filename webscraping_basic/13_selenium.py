@@ -25,8 +25,8 @@ elem = browser.find_element_by_id("query")
 from selenium.webdriver.common.keys import Keys
 elem.send_keys("나도코딩")
 elem.send_keys(Keys.ENTER)
-elem = browser.find_element_by_tag_name("a") ( 하나만 )
-elem = browser.find_elements_by_tag_name("a") ( 모두다 )
+elem = browser.find_element_by_tag_name("a") #( 하나만 )
+elem = browser.find_elements_by_tag_name("a") #( 모두다 )
 for e in elem:
     e.get_attribute("href")
 browser.get("http://daum.net")

@@ -37,7 +37,7 @@ print_match(m)
 m = p.search("good care")
 #search: 주어진 문자열 중에 일치하는게 있는지 확인
 print_match(m)
-
+print(m)
 lst = p.findall("good care cafe")
 #findall: 일치하는 모든 것을 리스트 형태로 반환
 print(lst)
