@@ -6,7 +6,8 @@ headers = {
     "Accept-Language":"ko-KR,ko"
     }
 
-url = "https://play.google.com/store/movies/top"
+# url = "https://play.google.com/store/movies/top"
+url = "https://www.altools.co.kr/Main/Default.aspx"
 res = requests.get(url, headers = headers)
 res.raise_for_status()
 soup = BeautifulSoup(res.text, "lxml")

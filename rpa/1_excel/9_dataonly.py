@@ -10,7 +10,7 @@ for row in ws.values:
 '''
 # 수식이 아닌 실제 데이터를 가져옴
 # evaluate 되지 않은 상태의 데이터는 none이라고 함
-# 따라서, 데이터를 가져올 때 엑셀 파일을 열었다가 다시 저장하고 불러와야함
+# 따라서, 데이터만 가져오고 싶을 때 엑셀 파일을 열었다가 다시 저장하고 , data_only= True 옵션 설정하고 불러와야함
 wb = load_workbook("sample_formula.xlsx", data_only= True)
 ws = wb.active
 

@@ -1,16 +1,19 @@
 from selenium import webdriver
-browser = webdriver.Chrome("chromedriver.exe")
+browser = webdriver.Chrome(r"C:\Users\vandr\OneDrive\바탕 화면\Bigdata\Python\webscraping_basic\chromedriver.exe")
 browser.maximize_window()
-
+import time
 # 페이지 이동
-url = "https://play.google.com/store/movies/top"
+url = "https://www.altools.co.kr/Main/Default.aspx"
 browser.get(url)
-
+elem = browser.find_element_by_xpath('//*[@id="content"]/div[2]/div/ul/li[1]/a[1]')
+elem.click()
+time.sleep(5)
 # 지정한 위치로 스크롤 내리기
 # 모니터(해상도) 높이인 1080 위치로 스크롤 내리기
 # browser.execute_script("window.scrollTo(0, 1080)") # 1920 x 1080
 # browser.execute_script("window.scrollTo(0, 2080)")
 
+'''
 # 화면 가장 아래로 스크롤 내리기
 browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
 
@@ -76,7 +79,7 @@ for movie in movies:
     print(f"할인 후 금액 : {price}")
     print(f"링크 : https://play.google.com{link}")
     print("-" * 100)
-
+'''
 #f-strings (최근 가장 인기)
 # 앞에 f 를 붙이고 {변수명} 형태로 작성한다. (대문자 F 도 가능)
 # 만약 내가 할인 전/후 금액 다 있는거 말고 할인 후 금액만 있는 것도 출력하고 싶다면 어떻게 해야할까?
