@@ -26,8 +26,7 @@ elem.send_keys("코딩")
 elem = browser.find_element_by_xpath('//*[@id="country"]')
 elem.send_keys("Canada")
 
-elem = browser.find_element_by_xpath('//*[@id="main"]/div[3]/textarea')
-elem.send_keys("퀴즈 완료하였습니다.")
+browser.find_element_by_xpath('//*[@id="main"]/div[3]/textarea').send_keys("퀴즈 완료하였습니다.")
 
 time.sleep(5)
 
