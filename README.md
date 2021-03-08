@@ -13,6 +13,7 @@
   * [혼자 공부하는 파이썬](https://book.naver.com/bookdb/book_detail.nhn?bid=15028688)
   * [Do it! 파이썬 생활 프로그래밍](https://book.naver.com/bookdb/book_detail.nhn?bid=16437083)
   * [파이썬 머신러닝 판다스 데이터 분석](https://book.naver.com/bookdb/book_detail.nhn?bid=15028524)
+  * [6개월치 업무를 하루만에 끝내는 업무자동화](https://book.naver.com/bookdb/book_detail.nhn?bid=17665326)
 * ***참고 영상***
   * [나도코딩](https://www.youtube.com/channel/UC7iAOLiALt2rtMVAWWl4pnw)
 
