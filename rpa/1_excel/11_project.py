@@ -35,9 +35,6 @@ def random_name():
     return result
 
 
-
-
-
 for i in range(NUM_SAMPLES):
     ids = i+1
     name = random_name()
@@ -50,5 +47,5 @@ for i in range(NUM_SAMPLES):
 
 
 
-wb.save("project.xlsx")
+wb.save("project_2.xlsx")
 
