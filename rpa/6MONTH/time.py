@@ -16,4 +16,4 @@ conj = ", ".join(con)
 print(", ".join(con))
 
 for i in range(3):
-    print("\n" + conj)
+    print(conj)
